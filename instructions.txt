@@ -1,0 +1,22 @@
+Just so you know, I don't have any ATOM, so I couldn't test this.
+
+Instructions:
+1. put gaiad.exe and infinitesend.bat in the same folder
+2. open a cmd window
+3. cd to the folder that has gaiad.exe and infinitesend.bat
+4. type "gaiad keys add redfox --recover"   You can change redfox to whatever alias you want
+5. enter your mnemonic when it asks for it
+6. using notepad, change the line in infinitesend that starts with "gaiad" to use the alias you picked 
+   (or keep "redfox", if that's what you typed for the "keys add" command), change the cosmos address you want to send 
+   to, and the amount in uatom you want to send.  
+   Send 10000uatom less then what is unbonding, because that is how much gas it will cost.
+   If someone gives you access to a different node that doesn't get as much traffic as the rpc.cosmos.network node,
+   you can change that too.
+7. When you save the file make sure it still has the .bat extension.  You might have to change your file explorer
+   settings to show file extensions if you don't see them.
+8. Move all your ATOM out of the account before you run the script.
+9. Sometime very close to when it will unbond, run the script by typing "infinitesend.bat" in the cmd window (make
+   sure you cd into the folder that has infinitesend.bat, and make sure gaiad.exe is in the same location)
+10. You can stop the script by pressing CTRL-C in the same cmd window you started it.  Might be a good idea to run it
+   as soon as you set up your alias and change the file to make sure it runs, and after you stop it, scroll up to 
+   see that it says that you ran out of gas (or something similar)
